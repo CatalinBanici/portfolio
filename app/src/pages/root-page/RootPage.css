@@ -1,0 +1,13 @@
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  align-self: center;
+  height: 70px;
+  width: 100%;
+  margin: 25px;
+  padding: 25px;
+  background-color: var(--ComponentBackground);
+  border-radius: 7px;
+}

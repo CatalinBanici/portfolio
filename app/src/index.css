@@ -1,0 +1,56 @@
+:root {
+  --Text1: hsl(0, 0%, 10.98%);
+  --Text2: hsl(0, 0%, 41%);
+  --Text3: hsl(38.82, 100%, 50%);
+  --ComponentBackground: hsla(0, 0%, 95%, 0.8);
+  --Shadow: hsl(0, 0%, 75%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Ubuntu";
+}
+
+.app {
+  background-image: url(./assets/images/background/background-image.jpg);
+  background-repeat: no-repeat;
+  height: 100vh;
+  min-height: 100vh;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.app-container {
+  width: 1800px;
+  display: flex;
+  flex-direction: column;
+  padding-inline: 25px;
+}
+
+/* ::-webkit-scrollbar {
+  width: 10px;
+  overflow-y: overlay;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--Text1);
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--Text3);
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: transparent;
+  background-size: 100px;
+} */

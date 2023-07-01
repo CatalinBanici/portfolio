@@ -28,10 +28,12 @@ const router = createBrowserRouter(
 
 function App() {
   return (
-    <div className="App">
-      <AppContext.Provider value="">
-        <RouterProvider router={router} />
-      </AppContext.Provider>
+    <div className="app">
+      <div className="app-container">
+        <AppContext.Provider value="">
+          <RouterProvider router={router} />
+        </AppContext.Provider>
+      </div>
     </div>
   );
 }

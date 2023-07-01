@@ -1,19 +1,30 @@
 import React from "react";
-import Logo from "./Logo";
-import NavLinks from "./NavLinks";
-import ThemeSelector from "./ThemeSelector";
+import { NavLink } from "react-router-dom";
+import "./Navbar.css";
+import { BsSun, BsMoon } from "react-icons/bs";
 
 export default function Navbar() {
   return (
     <>
-      <div>
-        <Logo />
+      <div className="logo">
+        <NavLink to="/">
+          <span>catalin</span>
+          <span>banici</span>
+          <span>.portfolio</span>
+        </NavLink>
       </div>
-      <nav>
-        <NavLinks />
+      <nav className="nav-links">
+        <NavLink to="about">About</NavLink>
+        <NavLink to="projects">Projects</NavLink>
+        <NavLink to="contact">Contact</NavLink>
       </nav>
-      <div>
-        <ThemeSelector />
+      <div className="theme-container">
+        <BsSun />
+        <label className="switch">
+          <input readOnly type="checkbox" />
+          <span className="slider round"></span>
+        </label>
+        <BsMoon />
       </div>
     </>
   );
