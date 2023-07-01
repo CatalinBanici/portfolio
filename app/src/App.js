@@ -1,3 +1,5 @@
+import { createContext } from "react";
+
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -10,6 +12,8 @@ import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import Projects from "./pages/projects/Projects";
 import Contact from "./pages/contact/Contact";
+
+export const AppContext = createContext("");
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -25,7 +29,9 @@ const router = createBrowserRouter(
 function App() {
   return (
     <div className="App">
-      <RouterProvider router={router} />
+      <AppContext.Provider value="">
+        <RouterProvider router={router} />
+      </AppContext.Provider>
     </div>
   );
 }
