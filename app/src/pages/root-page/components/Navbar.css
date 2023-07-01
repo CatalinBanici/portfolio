@@ -67,6 +67,8 @@
   display: inline-block;
   width: 40px;
   height: 20px;
+  border: 1px solid var(--Text3);
+  border-radius: 34px;
 }
 
 /* Hide default HTML checkbox */
@@ -95,14 +97,14 @@
   height: 14px;
   width: 14px;
   left: 4px;
-  bottom: 3px;
+  bottom: 2px;
   background-color: var(--Text3);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 input:checked + .slider {
-  background-color: rgb(71, 71, 71);
+  background-color: rgb(212, 212, 212);
 }
 
 input:focus + .slider {
@@ -110,9 +112,9 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(17px);
-  -ms-transform: translateX(17px);
-  transform: translateX(17px);
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
 }
 
 /* Rounded sliders */

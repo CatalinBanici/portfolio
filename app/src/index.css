@@ -1,9 +1,10 @@
 :root {
   --Text1: hsl(0, 0%, 10.98%);
   --Text2: hsl(0, 0%, 41%);
-  --Text3: hsl(38.82, 100%, 50%);
-  --ComponentBackground: hsla(0, 0%, 95%, 0.8);
-  --Shadow: hsl(0, 0%, 75%);
+  --Text3: hsl(219, 97%, 62%);
+  --ComponentBackground: hsla(0, 0%, 100%, 0.9);
+  --ComponentBackgroundHover: hsla(0, 0%, 100%);
+  --Shadow: hsl(207, 70%, 71%);
 }
 
 * {
@@ -19,6 +20,8 @@ body {
 .app {
   background-image: url(./assets/images/background/background-image.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   height: 100vh;
   min-height: 100vh;
   overflow: auto;

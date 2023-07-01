@@ -9,5 +9,6 @@ header {
   margin: 25px;
   padding: 25px;
   background-color: var(--ComponentBackground);
+  box-shadow: 0px 0px 90px 0px var(--Shadow);
   border-radius: 7px;
 }
