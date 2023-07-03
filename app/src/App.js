@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, useEffect, useState } from "react";
 
 import {
   createBrowserRouter,
@@ -27,10 +27,28 @@ const router = createBrowserRouter(
 );
 
 function App() {
+  const STORED_THEME = localStorage.getItem("theme-key")
+    ? JSON.parse(localStorage.getItem("theme-key"))
+    : "light";
+
+  const [theme, setTheme] = useState(STORED_THEME);
+
+  useEffect(() => {
+    localStorage.setItem("theme-key", JSON.stringify(theme));
+  }, [theme]);
+
+  function themeChanger() {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+  }
+
   return (
-    <div className="app">
+    <div
+      data-theme={theme}
+      className={theme === "light" ? "app light" : "app dark"}
+    >
       <div className="app-container">
-        <AppContext.Provider value="">
+        <AppContext.Provider value={{ theme, setTheme, themeChanger }}>
           <RouterProvider router={router} />
         </AppContext.Provider>
       </div>

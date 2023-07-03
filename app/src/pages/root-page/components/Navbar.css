@@ -52,13 +52,29 @@
   justify-content: space-between;
 }
 
-.theme-container svg {
-  cursor: pointer;
-  color: var(--Text2);
+.theme-button {
+  background-color: transparent;
+  border: none;
+  width: 1.3em;
+  height: 1.3em;
 }
 
-.theme-container svg:hover {
+.sun-icon,
+.moon-icon {
+  cursor: pointer;
+  color: var(--Text2);
+  height: 100%;
+  width: 100%;
+}
+
+.sun-icon:hover,
+.moon-icon:hover {
   color: var(--Text1);
+}
+
+.sun-icon.active,
+.moon-icon.active {
+  color: var(--Text3);
 }
 
 /* The switch - the box around the slider */
@@ -86,7 +102,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: white;
+  background-color: var(--ComponentBackground2);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -104,7 +120,7 @@
 }
 
 input:checked + .slider {
-  background-color: rgb(212, 212, 212);
+  background-color: var(--ComponentBackground2);
 }
 
 input:focus + .slider {

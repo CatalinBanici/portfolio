@@ -1,10 +1,21 @@
 :root {
   --Text1: hsl(0, 0%, 10.98%);
-  --Text2: hsl(0, 0%, 41%);
+  --Text2: hsl(0, 0%, 45%);
   --Text3: hsl(219, 97%, 62%);
-  --ComponentBackground: hsla(0, 0%, 100%, 0.9);
+  --ComponentBackground: hsla(0, 0%, 100%, 0.8);
+  --ComponentBackground2: hsla(0, 0%, 90%, 0.8);
   --ComponentBackgroundHover: hsla(0, 0%, 100%);
   --Shadow: hsl(207, 70%, 71%);
+}
+
+[data-theme="dark"] {
+  --Text1: hsl(0, 0%, 94%);
+  --Text2: hsl(0, 0%, 75%);
+  --Text3: hsl(44, 97%, 62%);
+  --ComponentBackground: hsla(0, 0%, 11%, 0.8);
+  --ComponentBackground2: hsla(0, 0%, 8%, 0.8);
+  --ComponentBackgroundHover: rgb(75, 75, 75);
+  --Shadow: hsl(46, 13%, 60%);
 }
 
 * {
@@ -18,7 +29,6 @@ body {
 }
 
 .app {
-  background-image: url(./assets/images/background/background-image.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -27,6 +37,15 @@ body {
   overflow: auto;
   display: flex;
   justify-content: center;
+  transition: 0.5s;
+}
+
+.light {
+  background-image: url(./assets/images/background/background-light.jpg);
+}
+
+.dark {
+  background-image: url(./assets/images/background/background-dark.jpg);
 }
 
 .app-container {
