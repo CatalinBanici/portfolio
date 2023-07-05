@@ -13,6 +13,8 @@ import About from "./pages/about/About";
 import Projects from "./pages/projects/Projects";
 import Contact from "./pages/contact/Contact";
 
+import data from "./data";
+
 export const AppContext = createContext("");
 
 const router = createBrowserRouter(
@@ -48,7 +50,7 @@ function App() {
       className={theme === "light" ? "app light" : "app dark"}
     >
       <div className="app-container">
-        <AppContext.Provider value={{ theme, setTheme, themeChanger }}>
+        <AppContext.Provider value={{ theme, setTheme, themeChanger, data }}>
           <RouterProvider router={router} />
         </AppContext.Provider>
       </div>
