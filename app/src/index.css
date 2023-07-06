@@ -2,8 +2,9 @@
   --Text1: hsl(0, 0%, 10.98%);
   --Text2: hsl(0, 0%, 45%);
   --Text3: hsl(219, 97%, 62%);
+  --TextButtons: hsl(0, 0%, 94%);
   --ComponentBackground: hsla(0, 0%, 100%, 0.8);
-  --ComponentBackground2: hsla(0, 0%, 90%, 0.8);
+  --ComponentBackground2: hsla(0, 0%, 90%, 0.9);
   --ComponentBackgroundHover: hsla(0, 0%, 100%);
   --Shadow: hsl(207, 70%, 71%);
 }
@@ -12,9 +13,10 @@
   --Text1: hsl(0, 0%, 94%);
   --Text2: hsl(0, 0%, 75%);
   --Text3: hsl(44, 97%, 62%);
+  --TextButtons: hsl(0, 0%, 10.98%);
   --ComponentBackground: hsla(0, 0%, 11%, 0.8);
-  --ComponentBackground2: hsla(0, 0%, 8%, 0.8);
-  --ComponentBackgroundHover: rgb(75, 75, 75);
+  --ComponentBackground2: hsla(0, 0%, 8%, 0.9);
+  --ComponentBackgroundHover: hsla(0, 0%, 11%);
   --Shadow: hsl(46, 13%, 60%);
 }
 
