@@ -1,0 +1,220 @@
+.home-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 50px;
+}
+
+.home-message-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: var(--ComponentBackground);
+  height: 80%;
+  width: 50%;
+  padding: 100px;
+  box-shadow: 0px 0px 25px -5px var(--Shadow);
+  border-radius: 10px;
+}
+
+.home-message-container h1 {
+  font-size: 100px;
+  color: var(--Text3);
+}
+
+.home-message-container h2 {
+  font-size: 50px;
+  color: var(--Text1);
+}
+
+.home-message-container h3 {
+  font-size: 30px;
+  color: var(--Text2);
+}
+
+.home-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  height: 80%;
+  width: 50%;
+}
+
+/* project card */
+
+.projects-card {
+  background-color: var(--ComponentBackground);
+  height: 50%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 25px -5px var(--Shadow);
+  transition: 0.3s;
+}
+
+.projects-card a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.projects-card a div {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 20px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.projects-card a div p {
+  font-size: 20px;
+  color: var(--Text2);
+}
+
+.projects-card a div svg {
+  min-width: 30px;
+  min-height: 30px;
+  color: var(--Text2);
+}
+
+.projects-card a h2 {
+  font-size: 40px;
+  color: var(--Text3);
+  padding: 20px;
+}
+
+.projects-card:hover {
+  transform: scale(1.03);
+  background-color: var(--Text3);
+}
+
+.projects-card:hover a div p,
+.projects-card:hover a div svg,
+.projects-card:hover a h2 {
+  color: var(--TextButtons);
+}
+
+/* about contact cards container */
+
+.about-contact-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  height: 50%;
+}
+
+/* about card */
+
+.about-card {
+  width: 50%;
+  background-color: var(--ComponentBackground);
+  border-radius: 10px;
+  box-shadow: 0px 0px 25px -5px var(--Shadow);
+  transition: 0.3s;
+}
+
+.about-card a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.about-card a div {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 20px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.about-card a div p {
+  font-size: 20px;
+  color: var(--Text2);
+}
+
+.about-card a div svg {
+  min-width: 30px;
+  min-height: 30px;
+  color: var(--Text2);
+}
+
+.about-card a h2 {
+  font-size: 40px;
+  color: var(--Text3);
+  padding: 20px;
+}
+
+.about-card:hover {
+  transform: scale(1.05);
+  background-color: var(--Text3);
+}
+
+.about-card:hover a div p,
+.about-card:hover a div svg,
+.about-card:hover a h2 {
+  color: var(--TextButtons);
+}
+
+/* contact card */
+
+.contact-card {
+  width: 50%;
+  background-color: var(--ComponentBackground);
+  border-radius: 10px;
+  box-shadow: 0px 0px 25px -5px var(--Shadow);
+  transition: 0.3s;
+}
+
+.contact-card a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.contact-card a div {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 20px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.contact-card a div p {
+  font-size: 20px;
+  color: var(--Text2);
+}
+
+.contact-card a div svg {
+  min-width: 30px;
+  min-height: 30px;
+  color: var(--Text2);
+}
+
+.contact-card a h2 {
+  font-size: 40px;
+  color: var(--Text3);
+  padding: 20px;
+}
+
+.contact-card:hover {
+  transform: scale(1.05);
+  background-color: var(--Text3);
+}
+
+.contact-card:hover a div p,
+.contact-card:hover a div svg,
+.contact-card:hover a h2 {
+  color: var(--TextButtons);
+}

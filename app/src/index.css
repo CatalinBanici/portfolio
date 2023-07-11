@@ -57,6 +57,15 @@ body {
   padding-inline: 25px;
 }
 
+/* .svg {
+  color: blue;
+}
+.svg svg {
+  width: 100px;
+  height: 100px;
+  color: aqua;
+} */
+
 /* ::-webkit-scrollbar {
   width: 10px;
   overflow-y: overlay;
