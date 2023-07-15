@@ -30,7 +30,7 @@ export default function ProjectCard({ project }) {
           <div className="tools-wrapper">
             {project.tools.map((tool, index) => (
               <div className="tool" key={index}>
-                <img src={tool?.toolIcon} alt={tool?.toolName} />
+                <img src={tool?.toolIcon} alt={`${tool?.toolName} Logo`} />
                 <p>{tool?.toolName}</p>
               </div>
             ))}

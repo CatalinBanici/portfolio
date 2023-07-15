@@ -1,31 +1,42 @@
-import React from "react";
+import React, { useContext } from "react";
 import avatar from "../../assets/images/avatar/avatar-placeholder.jpeg";
 
+import { BsLinkedin } from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
+
+import "./About.css";
+import { AppContext } from "../../App";
+import { Link } from "react-router-dom";
+
 export default function About() {
+  const { data } = useContext(AppContext);
   return (
     <>
       <div>
-        <section>
-          <h2>About Me</h2>
-          <p>
-            Nulla ipsum ea consectetur velit eu excepteur aute.Velit do minim
-            ullamco qui amet.Non fugiat cillum anim elit qui.Dolor incididunt
-            consectetur exercitation ipsum enim incididunt ex occaecat
-            occaecat.Pariatur nostrud aliqua nostrud sint id culpa incididunt
-            exercitation consectetur consequat dolor Lorem mollit sit.
-          </p>
-        </section>
         <div>
           <img src={avatar} alt="avatar" />
         </div>
+        <section>
+          <p>{data.bio}</p>
+        </section>
       </div>
       <div>
+        <div>
+          <Link target="blank" to={data.links.linkedin}>
+            <BsLinkedin />
+          </Link>
+          <Link target="blank" to={data.links.github}>
+            <BsGithub />
+          </Link>
+        </div>
         <section>
-          <h2>Skills</h2>
-          <p>I have average knowledge with the foillowing tools:</p>
-          <p>html</p>
-          <p>css</p>
-          <p>js</p>
+          <h3>Main skills:</h3>
+          {data.skills.map((skill, index) => (
+            <div key={index}>
+              <p>{skill?.skillName}</p>
+              <img src={skill?.skillIcon} alt={`${skill?.skillName} Logo`} />
+            </div>
+          ))}
         </section>
       </div>
     </>

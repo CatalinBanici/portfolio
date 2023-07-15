@@ -1,6 +1,9 @@
 import reactLogo from "./assets/images/logos/react-icon.png";
 import reactRouterLogo from "./assets/images/logos/react-router-icon.png";
 import formikLogo from "./assets/images/logos/formik-icon.png";
+import jsLogo from "./assets/images/logos/js-icon.png";
+import reduxLogo from "./assets/images/logos/redux-icon.png";
+import tailwindLogo from "./assets/images/logos/tailwind-icon.png";
 
 import spaceTourismWebsitePreview from "./assets/images/project-previews/space-tourism-website-preview.jpg";
 import advancedTodoListAppPreview from "./assets/images/project-previews/advanced-todo-list-app-preview.jpg";
@@ -8,6 +11,29 @@ import multiStepFormPreview from "./assets/images/project-previews/multi-step-fo
 import whereInTheWorld from "./assets/images/project-previews/where-in-the-world-preview.jpg";
 
 const data = {
+  links: {
+    linkedin: "https://linkedin.com/in/catalin-banici-a24b40253/",
+    github: "https://github.com/CatalinBanici",
+  },
+  bio: "Excepteur deserunt aute eiusmod commodo adipisicing.Do est quis ullamco ad excepteur occaecat amet ex esse anim velit exercitation.Exercitation veniam do eu elit non commodo eiusmod.",
+  skills: [
+    {
+      skillName: "Java Script",
+      skillIcon: jsLogo,
+    },
+    {
+      skillName: "React",
+      skillIcon: reactLogo,
+    },
+    {
+      skillName: "Redux",
+      skillIcon: reduxLogo,
+    },
+    {
+      skillName: "Tailwind CSS",
+      skillIcon: tailwindLogo,
+    },
+  ],
   projects: [
     {
       name: "Space Tourism Website",
