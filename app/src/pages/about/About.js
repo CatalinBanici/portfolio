@@ -11,17 +11,17 @@ import { Link } from "react-router-dom";
 export default function About() {
   const { data } = useContext(AppContext);
   return (
-    <>
-      <div>
-        <div>
+    <div className="about-container">
+      <div className="avatar-bio-container">
+        <div className="avatar-container">
           <img src={avatar} alt="avatar" />
         </div>
-        <section>
+        <section className="bio-container">
           <p>{data.bio}</p>
         </section>
       </div>
-      <div>
-        <div>
+      <div className="links-skills-container">
+        <div className="links-container">
           <Link target="blank" to={data.links.linkedin}>
             <BsLinkedin />
           </Link>
@@ -29,16 +29,16 @@ export default function About() {
             <BsGithub />
           </Link>
         </div>
-        <section>
+        <section className="skills-container">
           <h3>Main skills:</h3>
           {data.skills.map((skill, index) => (
-            <div key={index}>
+            <div className="skill" key={index}>
               <p>{skill?.skillName}</p>
               <img src={skill?.skillIcon} alt={`${skill?.skillName} Logo`} />
             </div>
           ))}
         </section>
       </div>
-    </>
+    </div>
   );
 }

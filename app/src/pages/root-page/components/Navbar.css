@@ -32,10 +32,14 @@
 .nav-links a {
   text-decoration: none;
   color: var(--Text2);
+  font-size: 18px;
+  transition: 0.2s;
 }
 
 .nav-links a:hover {
   color: var(--Text1);
+  text-shadow: var(--Shadow) 0 0 10px;
+  transform: scale(105%);
 }
 
 .nav-links a.active {
@@ -45,7 +49,7 @@
 /* THEME BUTTON  */
 
 .theme-container {
-  width: 100px;
+  width: 120px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -55,8 +59,8 @@
 .theme-button {
   background-color: transparent;
   border: none;
-  width: 1.3em;
-  height: 1.3em;
+  width: 1.6em;
+  height: 1.6em;
 }
 
 .sun-icon,
@@ -65,6 +69,7 @@
   color: var(--Text2);
   height: 100%;
   width: 100%;
+  transition: 0.3s;
 }
 
 .sun-icon:hover,
