@@ -1,0 +1,96 @@
+.form-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-width: 500px;
+  height: 600px;
+  background-color: var(--ComponentBackground);
+  padding: 50px;
+  box-shadow: 0px 0px 25px -5px var(--Shadow);
+  border-radius: 10px;
+}
+.form h2 {
+  color: var(--Text1);
+}
+
+.label {
+  color: var(--Text2);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 85px;
+}
+
+.input {
+  padding: 10px;
+  margin-block: 5px;
+}
+
+.textarea {
+  padding: 10px;
+  margin-block: 5px;
+}
+
+.message-label {
+  height: 180px;
+}
+
+.err-msg-char-limit-ctn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+}
+
+.char-limit {
+  position: absolute;
+  right: 0;
+}
+
+.links-button-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.links-button-container a svg {
+  height: 50px;
+  width: 50px;
+  color: var(--Text1);
+  transition: 0.3s;
+}
+
+.links-button-container a svg:hover {
+  opacity: 80%;
+  transform: scale(110%);
+}
+
+.send-button {
+  background-color: var(--Text3);
+  color: var(--TextButtons);
+  font-size: 20px;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.send-button:hover {
+  opacity: 70%;
+}
