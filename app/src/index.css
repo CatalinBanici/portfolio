@@ -6,7 +6,9 @@
   --ComponentBackground: hsla(0, 0%, 100%, 0.8);
   --ComponentBackground2: hsla(0, 0%, 90%, 0.9);
   --ComponentBackgroundHover: hsla(0, 0%, 100%);
-  --Shadow: hsl(207, 70%, 71%);
+  --Shadow: hsl(207, 100%, 86%);
+  --Error: hsla(0, 100%, 40%, 0.8);
+  --Success: hsla(120, 100%, 33%, 0.8);
 }
 
 [data-theme="dark"] {
@@ -18,6 +20,8 @@
   --ComponentBackground2: hsla(0, 0%, 8%, 0.9);
   --ComponentBackgroundHover: hsla(0, 0%, 11%);
   --Shadow: hsl(46, 13%, 60%);
+  --Error: hsla(0, 100%, 40%, 0.8);
+  --Success: hsla(120, 100%, 33%, 0.8);
 }
 
 * {

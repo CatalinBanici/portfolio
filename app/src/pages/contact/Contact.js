@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
@@ -10,9 +10,13 @@ import { AppContext } from "../../App";
 import { Link } from "react-router-dom";
 
 import { FiSend } from "react-icons/fi";
+import { BsCheckLg } from "react-icons/bs";
+import { RxCross2 } from "react-icons/rx";
+import { API_KEY, SERVICE_KEY, TEMPLATE_KEY } from "../../keys";
 
 export default function Contact() {
   const { data } = useContext(AppContext);
+  const [confirmationMessage, setConfirmationMessage] = useState("");
 
   const formik = useFormik({
     initialValues: {
@@ -25,13 +29,23 @@ export default function Contact() {
       email: Yup.string().email("Invaild email").required("Required"),
       message: Yup.string().required("Required."),
     }),
-    onSubmit: onSubmit,
+    onSubmit: (values, actions) => {
+      console.log(values);
+      emailjs.send(SERVICE_KEY, TEMPLATE_KEY, values, API_KEY).then(
+        (result) => {
+          console.log(result.text);
+          actions.resetForm();
+          setConfirmationMessage("success");
+          formik.setSubmitting(false);
+        },
+        (error) => {
+          console.log(error.text);
+          setConfirmationMessage("failed");
+          formik.setSubmitting(false);
+        }
+      );
+    },
   });
-
-  function onSubmit(values, actions) {
-    console.log(values);
-    actions.resetForm();
-  }
 
   return (
     <div className="form-container">
@@ -114,13 +128,26 @@ export default function Contact() {
           <Link target="blank" to={data.links.github}>
             <BsGithub />
           </Link>
-          <button className="send-button" type="submit">
-            Send
-            <FiSend />
-          </button>
+          {!formik.isSubmitting ? (
+            <button className="send-button" type="submit">
+              Send
+              <FiSend />
+            </button>
+          ) : (
+            <button className="send-button" disabled>
+              Sending... <span className="loader"></span>
+            </button>
+          )}
         </div>
-
-        <p className="confirmation-message">Confirmation msg placeholder</p>
+        {confirmationMessage === "success" ? (
+          <p className="confirmation-message-success">
+            <BsCheckLg /> <span>Message sent successfully!</span>
+          </p>
+        ) : null || confirmationMessage === "failed" ? (
+          <p className="confirmation-message-failed">
+            <RxCross2 /> <span>Something went wrong!</span>
+          </p>
+        ) : null}
       </form>
     </div>
   );
