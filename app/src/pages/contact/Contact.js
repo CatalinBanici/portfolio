@@ -12,7 +12,6 @@ import { Link } from "react-router-dom";
 import { FiSend } from "react-icons/fi";
 import { BsCheckLg } from "react-icons/bs";
 import { RxCross2 } from "react-icons/rx";
-import { API_KEY, SERVICE_KEY, TEMPLATE_KEY } from "../../keys";
 
 export default function Contact() {
   const { data } = useContext(AppContext);
@@ -31,19 +30,26 @@ export default function Contact() {
     }),
     onSubmit: (values, actions) => {
       console.log(values);
-      emailjs.send(SERVICE_KEY, TEMPLATE_KEY, values, API_KEY).then(
-        (result) => {
-          console.log(result.text);
-          actions.resetForm();
-          setConfirmationMessage("success");
-          formik.setSubmitting(false);
-        },
-        (error) => {
-          console.log(error.text);
-          setConfirmationMessage("failed");
-          formik.setSubmitting(false);
-        }
-      );
+      emailjs
+        .send(
+          process.env.REACT_APP_SERVICE_KEY,
+          process.env.REACT_APP_TEMPLATE_KEY,
+          values,
+          process.env.REACT_APP_API_KEY
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            actions.resetForm();
+            setConfirmationMessage("success");
+            formik.setSubmitting(false);
+          },
+          (error) => {
+            console.log(error.text);
+            setConfirmationMessage("failed");
+            formik.setSubmitting(false);
+          }
+        );
     },
   });
 
