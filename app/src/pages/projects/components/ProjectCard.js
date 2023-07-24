@@ -1,6 +1,7 @@
 import React from "react";
-import "./ProjectCard.css";
 import { Link } from "react-router-dom";
+
+import "./ProjectCard.css";
 
 export default function ProjectCard({ project }) {
   return (
@@ -20,7 +21,6 @@ export default function ProjectCard({ project }) {
           </button>
         </div>
       </div>
-
       <section className="project-details">
         <h3 className="project-name">{project?.name}</h3>
         <p className="project-description">{project?.description}</p>

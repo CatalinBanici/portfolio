@@ -1,16 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import "./Home.css";
-
 import { FiInfo } from "react-icons/fi";
 import { FiBriefcase } from "react-icons/fi";
 import { FiSend } from "react-icons/fi";
 
+import "./Home.css";
+
 export default function Home() {
   return (
     <div className="home-container">
-      <div className="home-message-container">
+      <div className="home-welcome-container">
         <h1>Hello!</h1>
         <h2>My name is Catalin</h2>
         <h3>Welcome to my portfolio website!</h3>

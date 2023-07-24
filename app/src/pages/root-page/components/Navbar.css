@@ -24,6 +24,13 @@
 
 /* NAV LINKS */
 
+.nav-links-container {
+  display: flex;
+  flex: 2;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .nav-links {
   display: flex;
   flex-direction: row;
@@ -48,13 +55,6 @@
 
 .nav-links a.active {
   color: var(--Text3);
-}
-
-.nav-links-container {
-  display: flex;
-  flex: 2;
-  align-items: center;
-  justify-content: space-between;
 }
 
 /* THEME BUTTON  */

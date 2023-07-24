@@ -1,8 +1,10 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
-import "./Navbar.css";
 import { BsSun, BsMoon } from "react-icons/bs";
+
 import { AppContext } from "../../../App";
+
+import "./Navbar.css";
 
 export default function Navbar() {
   const { theme, setTheme, themeChanger } = useContext(AppContext);
@@ -27,7 +29,6 @@ export default function Navbar() {
               className={theme === "light" ? "sun-icon active" : "sun-icon"}
             />
           </button>
-
           <label className="switch">
             <input
               checked={theme === "dark"}

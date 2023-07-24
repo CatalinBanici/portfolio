@@ -7,7 +7,9 @@
   gap: 50px;
 }
 
-.home-message-container {
+/* WELCOME MESSAGE CONTAINER */
+
+.home-welcome-container {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -19,20 +21,22 @@
   border-radius: 10px;
 }
 
-.home-message-container h1 {
+.home-welcome-container h1 {
   font-size: 100px;
   color: var(--Text3);
 }
 
-.home-message-container h2 {
+.home-welcome-container h2 {
   font-size: 50px;
   color: var(--Text1);
 }
 
-.home-message-container h3 {
+.home-welcome-container h3 {
   font-size: 30px;
   color: var(--Text2);
 }
+
+/* CARDS CONTAINER */
 
 .home-cards-container {
   display: flex;
