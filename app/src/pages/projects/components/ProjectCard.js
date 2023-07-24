@@ -8,17 +8,13 @@ export default function ProjectCard({ project }) {
     <div className="project-card">
       <div className="project-logo">
         <img src={project?.preview} alt="project placeholder" />
-        <div className="project-buttons">
-          <button>
-            <Link target="blank" to={project?.urlSrc}>
-              Source Code
-            </Link>
-          </button>
-          <button>
-            <Link target="blank" to={project?.urlLive}>
-              Live Page
-            </Link>
-          </button>
+        <div className="project-links">
+          <Link target="blank" to={project?.urlSrc}>
+            Source Code
+          </Link>
+          <Link target="blank" to={project?.urlLive}>
+            Live Page
+          </Link>
         </div>
       </div>
       <section className="project-details">

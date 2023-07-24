@@ -1,23 +1,22 @@
 import React, { useContext, useState } from "react";
+import { Link } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
 
-import "./Contact.css";
+import { AppContext } from "../../App";
+
 import { BsLinkedin } from "react-icons/bs";
 import { BsGithub } from "react-icons/bs";
-import { AppContext } from "../../App";
-import { Link } from "react-router-dom";
-
 import { FiSend } from "react-icons/fi";
 import { BsCheckLg } from "react-icons/bs";
 import { RxCross2 } from "react-icons/rx";
 
+import "./Contact.css";
+
 export default function Contact() {
   const { data } = useContext(AppContext);
   const [confirmationMessage, setConfirmationMessage] = useState("");
-
-  // todo: add dynamic value to character limits in input fields
 
   const formik = useFormik({
     initialValues: {
@@ -31,7 +30,6 @@ export default function Contact() {
       message: Yup.string().required("Required."),
     }),
     onSubmit: (values, actions) => {
-      console.log(values);
       emailjs
         .send(
           process.env.REACT_APP_SERVICE_KEY,
@@ -55,6 +53,9 @@ export default function Contact() {
     },
   });
 
+  const textareaLimit = "300";
+  const inputLimit = "40";
+
   return (
     <div className="form-container">
       <form className="form" onSubmit={formik.handleSubmit}>
@@ -70,7 +71,7 @@ export default function Contact() {
             type="text"
             id="name"
             name="name"
-            maxLength="30"
+            maxLength={inputLimit}
             placeholder="Enter your name."
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
@@ -92,7 +93,7 @@ export default function Contact() {
             type="email"
             id="email"
             name="email"
-            maxLength="30"
+            maxLength={inputLimit}
             placeholder="Enter your email."
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
@@ -115,7 +116,7 @@ export default function Contact() {
             name="message"
             rows="7"
             cols="50"
-            maxLength="300"
+            maxLength={textareaLimit}
             placeholder="Enter your message."
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
@@ -125,7 +126,9 @@ export default function Contact() {
             {formik.errors.message && formik.touched.message && (
               <p className="error-message">{formik.errors.message}</p>
             )}
-            <p className="char-limit">{formik.values.message.length}/300</p>
+            <p className="char-limit">
+              {formik.values.message.length}/{textareaLimit}
+            </p>
           </div>
         </label>
 
