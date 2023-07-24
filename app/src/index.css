@@ -59,6 +59,7 @@ body {
   display: flex;
   flex-direction: column;
   padding-inline: 25px;
+  gap: max(10vh, 25px);
 }
 
 /* .svg {

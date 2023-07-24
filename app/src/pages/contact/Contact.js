@@ -17,6 +17,8 @@ export default function Contact() {
   const { data } = useContext(AppContext);
   const [confirmationMessage, setConfirmationMessage] = useState("");
 
+  // todo: add dynamic value to character limits in input fields
+
   const formik = useFormik({
     initialValues: {
       name: "",

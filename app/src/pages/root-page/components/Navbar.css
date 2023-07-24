@@ -1,5 +1,9 @@
 /* LOGO */
 
+.logo {
+  flex: 1;
+}
+
 .logo a {
   text-decoration: none;
 }
@@ -25,7 +29,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 30%;
+  width: 60%;
   height: 100%;
 }
 
@@ -44,6 +48,13 @@
 
 .nav-links a.active {
   color: var(--Text3);
+}
+
+.nav-links-container {
+  display: flex;
+  flex: 2;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /* THEME BUTTON  */
