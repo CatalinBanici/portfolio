@@ -1,13 +1,43 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { BsSun, BsMoon } from "react-icons/bs";
 
 import { AppContext } from "../../../App";
 
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+
 import "./Navbar.css";
 
 export default function Navbar() {
   const { theme, setTheme, themeChanger } = useContext(AppContext);
+
+  const [toggleNavClass, setToggleNavClass] = useState("nav-close");
+  const navRef = useRef();
+
+  function toggleNav() {
+    if (toggleNavClass === "nav-close") {
+      setToggleNavClass("nav-open");
+    } else {
+      setToggleNavClass("nav-close");
+    }
+  }
+
+  useEffect(() => {
+    function closeNavOnOutsideClick(e) {
+      if (
+        toggleNavClass === "nav-open" &&
+        navRef.current &&
+        !navRef.current.contains(e.target)
+      ) {
+        setToggleNavClass("nav-close");
+      }
+    }
+    document.addEventListener("mousedown", closeNavOnOutsideClick);
+    return () => {
+      document.removeEventListener("mousedown", closeNavOnOutsideClick);
+    };
+  }, [toggleNavClass]);
+
   return (
     <>
       <div className="logo">
@@ -16,8 +46,15 @@ export default function Navbar() {
           <span>banici</span>
           <span>.portfolio</span>
         </NavLink>
+        <button onClick={toggleNav}>
+          {toggleNavClass === "nav-close" ? (
+            <AiOutlineMenu />
+          ) : (
+            <AiOutlineClose />
+          )}
+        </button>
       </div>
-      <div className="nav-links-container">
+      <div ref={navRef} className={"nav-links-container " + toggleNavClass}>
         <nav className="nav-links">
           <NavLink to="about">About</NavLink>
           <NavLink to="projects">Projects</NavLink>
