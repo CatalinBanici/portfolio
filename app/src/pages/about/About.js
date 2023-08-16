@@ -31,12 +31,14 @@ export default function About() {
         </div>
         <section className="skills-container">
           <h3>Main skills:</h3>
-          {data.skills.map((skill, index) => (
-            <div className="skill" key={index}>
-              <p>{skill?.skillName}</p>
-              <img src={skill?.skillIcon} alt={`${skill?.skillName} Logo`} />
-            </div>
-          ))}
+          <div className="skills-wrapper">
+            {data.skills.map((skill, index) => (
+              <div className="skill" key={index}>
+                <p>{skill?.skillName}</p>
+                <img src={skill?.skillIcon} alt={`${skill?.skillName} Logo`} />
+              </div>
+            ))}
+          </div>
         </section>
       </div>
     </div>

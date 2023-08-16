@@ -16,3 +16,10 @@ header {
 main {
   padding-bottom: 50px;
 }
+
+@media (max-width: 450px) {
+  header {
+    width: 100vw;
+    padding-inline: min(5vw, 25px);
+  }
+}

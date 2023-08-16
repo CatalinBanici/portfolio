@@ -62,6 +62,19 @@ body {
   gap: max(10vh, 25px);
 }
 
+@media (max-width: 1000px) {
+  .app-container {
+    gap: 25px;
+  }
+}
+
+@media (max-width: 450px) {
+  .app-container {
+    padding-inline: unset;
+    width: 100vw;
+  }
+}
+
 /* .svg {
   color: blue;
 }

@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
 .logo a {
@@ -210,12 +211,35 @@ input:checked + .slider:before {
   .nav-close {
     visibility: hidden;
     right: -200px;
+    top: min(45vh, 140px);
+    padding-block: min(5vh, 50px);
+    height: min(50vh, 350px);
   }
 
   .nav-open {
     display: flex;
     transform: translateX(0);
-    top: 140px;
     z-index: 10;
+    top: min(45vh, 140px);
+    padding-block: min(5vh, 50px);
+    height: min(50vh, 350px);
+  }
+}
+
+@media (max-width: 450px) {
+  .logo a {
+    padding-right: 10px;
+  }
+
+  .logo span:nth-child(1) {
+    font-size: min(8vw, 30px);
+  }
+
+  .logo span:nth-child(2) {
+    font-size: min(8vw, 30px);
+  }
+
+  .logo span:nth-child(3) {
+    font-size: min(8vw, 16px);
   }
 }

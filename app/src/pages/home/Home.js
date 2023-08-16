@@ -13,6 +13,7 @@ export default function Home() {
       <div className="home-welcome-container">
         <h1>Hello!</h1>
         <h2>My name is Catalin</h2>
+        <h3>I'm a frontend web developer</h3>
         <h3>Welcome to my portfolio website!</h3>
       </div>
       <div className="home-cards-container">
