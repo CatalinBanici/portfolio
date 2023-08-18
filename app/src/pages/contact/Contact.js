@@ -133,22 +133,26 @@ export default function Contact() {
         </label>
 
         <div className="links-button-container">
-          <Link target="blank" to={data.links.linkedin}>
-            <BsLinkedin />
-          </Link>
-          <Link target="blank" to={data.links.github}>
-            <BsGithub />
-          </Link>
-          {!formik.isSubmitting ? (
-            <button className="send-button" type="submit">
-              Send
-              <FiSend />
-            </button>
-          ) : (
-            <button className="send-button" disabled>
-              Sending... <span className="loader"></span>
-            </button>
-          )}
+          <div className="links-wrapper">
+            <Link target="blank" to={data.links.linkedin}>
+              <BsLinkedin />
+            </Link>
+            <Link target="blank" to={data.links.github}>
+              <BsGithub />
+            </Link>
+          </div>
+          <div className="button-wrapper">
+            {!formik.isSubmitting ? (
+              <button className="send-button" type="submit">
+                Send
+                <FiSend />
+              </button>
+            ) : (
+              <button className="send-button" disabled>
+                Sending... <span className="loader"></span>
+              </button>
+            )}
+          </div>
         </div>
         {confirmationMessage === "success" ? (
           <p className="confirmation-message-success">

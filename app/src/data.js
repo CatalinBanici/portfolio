@@ -14,8 +14,9 @@ const data = {
   links: {
     linkedin: "https://linkedin.com/in/catalin-banici-a24b40253/",
     github: "https://github.com/CatalinBanici",
+    frontEndMentor: "https://www.frontendmentor.io/profile/CatalinBanici",
   },
-  bio: "Excepteur deserunt aute eiusmod commodo adipisicing.Do est quis ullamco ad excepteur occaecat amet ex esse anim velit exercitation.Exercitation veniam do eu elit non commodo eiusmod.",
+  bio: "I'm Catalin, a self-taught frontend web developer, passionate about building user interfaces of a web application. \n \n I'm looking forward to be part of a team and culture where I can help and cooperate to building amazing projects together while taking my skills to the next level. \n \n You can find me a friendly and loyal person, excited about new challenges and open to feedback. \n \n If that sounds interesting to you, don't hesitate to send me a message. Thank you!",
   skills: [
     {
       skillName: "Java Script",
