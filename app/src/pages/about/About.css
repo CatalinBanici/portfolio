@@ -123,9 +123,19 @@
     height: unset;
   }
 
+  .avatar-container {
+    min-width: unset;
+  }
+
+  .bio-container p {
+    margin: min(5vw, 50px);
+    font-size: min(5vw, 18px);
+  }
+
   .avatar-container img {
     width: 405px;
-    margin: 25px;
+    margin: min(3vw, 25px);
+    min-width: 250px;
   }
 
   .links-skills-container {
@@ -138,6 +148,7 @@
 
   .links-container {
     align-self: center;
+    width: min(65vw, 350px);
   }
 }
 
@@ -150,6 +161,18 @@
   }
 
   .skills-wrapper {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .skill {
+    height: 100px;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 450px) {
+  .avatar-container img {
     width: 100%;
   }
 }
