@@ -68,6 +68,7 @@ export default function Navbar() {
           </button>
           <label className="switch">
             <input
+              tabIndex="-1"
               checked={theme === "dark"}
               onClick={themeChanger}
               readOnly

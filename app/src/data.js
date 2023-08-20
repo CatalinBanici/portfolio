@@ -16,7 +16,7 @@ const data = {
     github: "https://github.com/CatalinBanici",
     frontEndMentor: "https://www.frontendmentor.io/profile/CatalinBanici",
   },
-  bio: "I'm Catalin, a self-taught frontend web developer, passionate about building user interfaces of a web application. \n \n I'm looking forward to be part of a team and culture where I can help and cooperate to building amazing projects together while taking my skills to the next level. \n \n You can find me a friendly and loyal person, excited about new challenges and open to feedback. \n \n If that sounds interesting to you, don't hesitate to send me a message. Thank you!",
+  bio: "I'm Catalin, a self-taught frontend web developer, passionate about building the user interface of a web application. \n \n I'm looking forward to be part of a team and culture where I can help and cooperate to building amazing projects together while taking my skills to the next level. \n \n You can find me a friendly and loyal person, excited about new challenges and open to feedback. \n \n I'm looking forward to hear from you!",
   skills: [
     {
       skillName: "Java Script",

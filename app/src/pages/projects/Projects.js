@@ -13,7 +13,7 @@ export default function Projects() {
     <div className="projects-container">
       <div className="projects-header">
         <p>
-          These are my best projects so far. <br /> If you wish to see all my
+          These are my most recent projects. <br /> If you wish to see all my
           projects, check out my{" "}
           <Link target="blank" to={data.links.github}>
             Github

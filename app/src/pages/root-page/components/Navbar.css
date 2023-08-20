@@ -94,11 +94,17 @@
 .sun-icon:hover,
 .moon-icon:hover {
   color: var(--Text1);
+  transform: scale(110%);
 }
 
 .sun-icon.active,
 .moon-icon.active {
   color: var(--Text3);
+}
+
+.sun-icon.active:hover,
+.moon-icon.active:hover {
+  opacity: 70%;
 }
 
 /* The switch - the box around the slider */
@@ -109,6 +115,11 @@
   height: 20px;
   border: 1px solid var(--Text3);
   border-radius: 34px;
+  transition: 0.3s;
+}
+
+.switch:hover {
+  transform: scale(105%);
 }
 
 /* Hide default HTML checkbox */
@@ -162,8 +173,49 @@ input:checked + .slider:before {
   border-radius: 34px;
 }
 
+.slider.round:hover {
+  opacity: 70%;
+}
+
 .slider.round:before {
   border-radius: 50%;
+}
+
+/* removing all the hover effects */
+@media (max-width: 1400px) {
+  .nav-links a:hover {
+    color: var(--Text2);
+    text-shadow: unset;
+    transform: unset;
+  }
+
+  .nav-links a.active {
+    color: var(--Text3);
+  }
+
+  .sun-icon:hover,
+  .moon-icon:hover {
+    color: var(--Text2);
+    transform: unset;
+  }
+
+  .sun-icon.active,
+  .moon-icon.active {
+    color: var(--Text3);
+  }
+
+  .sun-icon.active:hover,
+  .moon-icon.active:hover {
+    opacity: unset;
+  }
+
+  .switch:hover {
+    transform: unset;
+  }
+
+  .slider.round:hover {
+    opacity: unset;
+  }
 }
 
 @media (max-width: 1000px) {

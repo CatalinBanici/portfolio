@@ -184,7 +184,7 @@
   }
 }
 
-@media (max-width: 500px) {
+/* @media (max-width: 500px) {
   .form-container {
     width: 100%;
   }
@@ -201,12 +201,37 @@
   .input {
     width: 100%;
   }
+} */
+/* removing the hover effects */
+@media (max-width: 1400px) {
+  .links-button-container a svg:hover {
+    opacity: unset;
+    transform: unset;
+  }
+
+  .send-button:hover {
+    opacity: unset;
+  }
 }
 
 @media (max-width: 500px) {
+  .form-container {
+    width: 100%;
+  }
+
   .form {
     height: 650px;
     padding: 15px;
+    min-width: unset;
+    width: 100%;
+  }
+
+  .label {
+    width: 100%;
+  }
+
+  .input {
+    width: 100%;
   }
 
   .links-button-container {

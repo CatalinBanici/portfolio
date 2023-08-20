@@ -117,6 +117,13 @@
   width: 50px;
 }
 
+@media (max-width: 1400px) {
+  .links-container a svg:hover {
+    opacity: unset;
+    transform: unset;
+  }
+}
+
 @media (max-width: 1000px) {
   .about-container {
     height: unset;

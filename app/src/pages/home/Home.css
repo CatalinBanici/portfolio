@@ -224,6 +224,51 @@
   color: var(--TextButtons);
 }
 
+/* removing the hover effects */
+@media (max-width: 1400px) {
+  .about-card:hover {
+    transform: unset;
+    background-color: var(--ComponentBackground);
+  }
+  .about-card:hover a div p {
+    color: var(--Text2);
+  }
+  .about-card:hover a div svg {
+    color: var(--Text2);
+  }
+  .about-card:hover a h2 {
+    color: var(--Text3);
+  }
+
+  .contact-card:hover {
+    transform: unset;
+    background-color: var(--ComponentBackground);
+  }
+  .contact-card:hover a div p {
+    color: var(--Text2);
+  }
+  .contact-card:hover a div svg {
+    color: var(--Text2);
+  }
+  .contact-card:hover a h2 {
+    color: var(--Text3);
+  }
+
+  .projects-card:hover {
+    transform: unset;
+    background-color: var(--ComponentBackground);
+  }
+  .projects-card:hover a div p {
+    color: var(--Text2);
+  }
+  .projects-card:hover a div svg {
+    color: var(--Text2);
+  }
+  .projects-card:hover a h2 {
+    color: var(--Text3);
+  }
+}
+
 @media (max-width: 1000px) {
   .home-container {
     flex-direction: column;

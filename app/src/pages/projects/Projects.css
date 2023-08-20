@@ -21,6 +21,11 @@
 
 .projects-header a {
   color: var(--Text1);
+  transition: 0.3s;
+}
+
+.projects-header a:hover {
+  color: var(--Text3);
 }
 
 .projects-wrapper {
@@ -32,4 +37,7 @@
 }
 
 @media (max-width: 1400px) {
+  .projects-header a:hover {
+    color: var(--Text1);
+  }
 }
