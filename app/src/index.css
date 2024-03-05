@@ -9,6 +9,16 @@
   --Shadow: hsl(207, 100%, 86%);
   --Error: hsla(0, 100%, 40%, 0.8);
   --Success: hsla(120, 100%, 33%, 0.8);
+  --BackgroundRadient: linear-gradient(
+    75deg,
+    rgb(255, 255, 255),
+    rgb(255, 255, 255),
+    rgb(195, 228, 255),
+    rgb(198, 248, 255),
+    rgb(255, 255, 255),
+    rgb(255, 255, 255),
+    rgb(255, 255, 255)
+  );
 }
 
 [data-theme="dark"] {
@@ -22,6 +32,16 @@
   --Shadow: hsl(46, 13%, 60%);
   --Error: hsla(0, 100%, 40%, 0.8);
   --Success: hsla(120, 100%, 33%, 0.8);
+  --BackgroundRadient: linear-gradient(
+    75deg,
+    rgb(0, 0, 0),
+    rgb(0, 0, 0),
+    rgb(61, 45, 0),
+    rgb(70, 65, 0),
+    rgb(0, 0, 0),
+    rgb(0, 0, 0),
+    rgb(0, 0, 0)
+  );
 }
 
 * {
@@ -36,22 +56,22 @@ body {
 
 .app {
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-size: 200%;
   height: 100vh;
   min-height: 100vh;
   overflow: auto;
   display: flex;
   justify-content: center;
   transition: 0.5s;
+  animation: bg-animation 200s infinite;
 }
 
 .light {
-  background-image: url(./assets/images/background/background-light.jpg);
+  background-image: var(--BackgroundRadient);
 }
 
 .dark {
-  background-image: url(./assets/images/background/background-dark.jpg);
+  background-image: var(--BackgroundRadient);
 }
 
 .app-container {
@@ -60,6 +80,18 @@ body {
   flex-direction: column;
   padding-inline: 25px;
   gap: max(10vh, 25px);
+}
+
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
 }
 
 @media (max-width: 1000px) {
