@@ -96,7 +96,6 @@
 }
 
 .project-tools-container {
-  height: 55px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -110,6 +109,7 @@
 
 .tools-wrapper {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   gap: 10px;
 }

@@ -12,14 +12,16 @@ export default function ProjectCard({ project }) {
           <Link target="blank" to={project?.urlSrc}>
             Source Code
           </Link>
-          <Link target="blank" to={project?.urlLive}>
-            Live Page
-          </Link>
+          {project.name === "Portfolio" ? null : (
+            <Link target="blank" to={project?.urlLive}>
+              Live Page
+            </Link>
+          )}
         </div>
       </div>
       <section className="project-details">
         <h3 className="project-name">{project?.name}</h3>
-        <p className="project-description">{project?.description}</p>
+        <div className="project-description">{project?.description}</div>
         <hr />
         <div className="project-tools-container">
           <h4>Tools used:</h4>

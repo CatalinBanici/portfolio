@@ -4,6 +4,7 @@
   --Text3: hsl(219, 97%, 62%);
   --TextButtons: hsl(0, 0%, 94%);
   --ComponentBackground: hsla(0, 0%, 100%, 0.8);
+  --ComponentBackgroundSolid: hsl(0, 0%, 100%);
   --ComponentBackground2: hsla(0, 0%, 90%, 0.9);
   --ComponentBackgroundHover: hsla(0, 0%, 100%);
   --Shadow: hsl(207, 100%, 86%);
@@ -11,13 +12,15 @@
   --Success: hsla(120, 100%, 33%, 0.8);
   --BackgroundRadient: linear-gradient(
     75deg,
+    rgb(195, 228, 255),
     rgb(255, 255, 255),
     rgb(255, 255, 255),
     rgb(195, 228, 255),
     rgb(198, 248, 255),
     rgb(255, 255, 255),
     rgb(255, 255, 255),
-    rgb(255, 255, 255)
+    rgb(255, 255, 255),
+    rgb(198, 248, 255)
   );
 }
 
@@ -27,6 +30,7 @@
   --Text3: hsl(44, 97%, 62%);
   --TextButtons: hsl(0, 0%, 10.98%);
   --ComponentBackground: hsla(0, 0%, 11%, 0.8);
+  --ComponentBackgroundSolid: hsl(0, 0%, 11%);
   --ComponentBackground2: hsla(0, 0%, 8%, 0.9);
   --ComponentBackgroundHover: hsla(0, 0%, 11%);
   --Shadow: hsl(46, 13%, 60%);
@@ -34,13 +38,15 @@
   --Success: hsla(120, 100%, 33%, 0.8);
   --BackgroundRadient: linear-gradient(
     75deg,
+    rgb(61, 45, 0),
     rgb(0, 0, 0),
     rgb(0, 0, 0),
     rgb(61, 45, 0),
     rgb(70, 65, 0),
     rgb(0, 0, 0),
     rgb(0, 0, 0),
-    rgb(0, 0, 0)
+    rgb(0, 0, 0),
+    rgb(70, 65, 0)
   );
 }
 
