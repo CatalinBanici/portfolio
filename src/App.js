@@ -31,7 +31,7 @@ const router = createBrowserRouter(
 function App() {
   const STORED_THEME = localStorage.getItem("theme-key")
     ? JSON.parse(localStorage.getItem("theme-key"))
-    : "light";
+    : "dark";
 
   const [theme, setTheme] = useState(STORED_THEME);
 

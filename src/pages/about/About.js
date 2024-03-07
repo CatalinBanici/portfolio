@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import avatar from "../../assets/images/avatar/avatar-placeholder.jpeg";
+import avatar from "../../assets/images/avatar/avatar.jpg";
 
 import { BsLinkedin } from "react-icons/bs";
 import { BsGithub } from "react-icons/bs";

@@ -41,11 +41,11 @@ const data = {
       preview: countriesPreview,
       description: (
         <p>
-          A client-side web application that represents the countries of the
-          world! You can <i>search</i>, <i>filter</i> and <i>sort</i> countries,
-          as well as being able to see the details of a particular country. It
-          is based on the <i>REST Countries API</i>. The app also features a{" "}
-          <i>light / dark</i> theme.
+          A web application that represents the countries of the world! You can{" "}
+          <i>search</i>, <i>filter</i> and <i>sort</i> countries, as well as
+          being able to see the details of a particular country. It is based on
+          the <i>REST Countries API</i> with the help of <i>RTK-Query</i>. The
+          app also features a <i>light / dark</i> theme.
         </p>
       ),
       urlSrc: "https://github.com/CatalinBanici/where-in-the-world-v2",
